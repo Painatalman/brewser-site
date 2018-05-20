@@ -39,7 +39,7 @@ export default {
     width: 240px;
   }
   .slider {
-    position: absolute;
+    position: absolute !important;
     top: 15.4%;
     left: 50%;
     transform: translateX(-50%);
