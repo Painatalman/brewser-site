@@ -26,7 +26,7 @@ export default {
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 768px) {
     .row {
       flex-direction: column;
     }

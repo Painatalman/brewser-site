@@ -20,5 +20,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+  @media (max-width: 768px) {
+    .col {
+      padding: 12px 24px;
+      text-align: center;
+    }
+  }
 </style>

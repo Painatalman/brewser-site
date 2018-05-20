@@ -135,6 +135,12 @@ a {
   height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .splashscreen {
+    height: auto;
+  }
+}
+
 .gallery {
   display: flex;
   align-items: center;
