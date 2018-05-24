@@ -26,6 +26,7 @@
 .download-buttons {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .download-button {

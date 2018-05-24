@@ -41,6 +41,76 @@
         </Column>
       </Row>
     </PageContainer>
+    <PageContainer>
+      <Row>
+        <Column>
+          <Header>
+          </Header>
+        </Column>
+      </Row>
+      <Row>
+        <Column :flex="flexSides">
+          <FeatureBlock :title="leftTitle">
+            <p>
+              All the APP's functionalities, with<br>
+              advertisements. Updates will arrive slower.
+            </p>
+          </FeatureBlock>
+        </Column>
+        <Column :flex="flexCenter">
+          <PhonePicture></PhonePicture>
+        </Column>
+        <Column :flex="flexSides">
+          <FeatureBlock
+            :title=rightTitle
+          >
+            <div class="gallery">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+              <img class="gallery__image" src="http://placekitten.com/300/200" alt="placeholder kitten">
+            </div>
+          </FeatureBlock>
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Footer></Footer>
+        </Column>
+      </Row>
+    </PageContainer>
+    <PageContainer>
+      <Row>
+        <Column>
+          <Header :subtitle='downloadNowTitle'>
+          </Header>
+        </Column>
+      </Row>
+      <Row>
+        <Column :flex="flexCenter">
+          <Card :title="cardLeftTitle">
+            <p>
+              All the APP's functionalities, with<br>
+              advertisements. Updates will<br>
+              arrive slower.
+            </p>
+          </Card>
+        </Column>
+        <Column :flex="flexCenter">
+          <Card
+            :title="cardRightTitle"
+          >
+            <p>
+              All the APP's functionalities,<br>
+              ad free. Updates will arrive faster<br>
+              for premium users.
+            </p>
+          </Card>
+        </Column>
+      </Row>
+    </PageContainer>
   </div>
 </template>
 
@@ -53,7 +123,8 @@ import FeatureBlock from '@/components/FeatureBlock.vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import PhonePicture from '@/components/PhonePicture.vue'
-import TemporaryLabel from '@/components/TemporaryLabel.vue'
+
+import Card from '@/components/Card.vue'
 
 import { TimelineLite } from 'gsap'
 
@@ -67,12 +138,15 @@ export default {
     'FeatureBlock': FeatureBlock,
     'Header': Header,
     'PhonePicture': PhonePicture,
-    'TemporaryLabel': TemporaryLabel
+    'Card': Card
   },
   data: function () {
     return {
       leftTitle: 'Search and discover your favourite kittens',
       rightTitle: 'Some of the kittens that have already joined us',
+      cardLeftTitle: 'Free Version',
+      cardRightTitle: 'Premium Version',
+      downloadNowTitle: 'Download Now',
       flexSides: 3,
       flexCenter: 4,
       flexRight: 3
